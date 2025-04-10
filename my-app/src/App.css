@@ -1,0 +1,964 @@
+
+
+.app-container { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+}
+.carousel-message-box {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.wow-header-box {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.REC-LOGO {
+  height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.wow-header {
+  justify-content: flex-start;
+  transform: translateX(-35vw); /* Shift logo to left */
+}
+
+/* Logos */
+.logos-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.logo-container {
+  text-align: center;
+  position: relative;
+}
+
+.logo-bubble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-message {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  white-space: nowrap;
+}
+
+/* WOW logo */
+.wow-container {
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.wow-logo {
+  width: 350px;
+  height: 350px;
+  transition: transform 3s ease-in-out;
+}
+
+.wow-container:hover .wow-logo {
+  transform: translateY(-20px) scale(1.1);
+}
+
+.wow-text {
+  font-size: 8rem;
+  font-weight: bold;
+  animation: popUp 1s ease-in-out;
+  color: #fff;
+  background-color: #00000099;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+}
+
+@keyframes popUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes dance {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-5deg) scale(1.05); }
+  50% { transform: rotate(5deg) scale(1.05); }
+  75% { transform: rotate(-3deg) scale(1.03); }
+}
+.register-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 25px 40px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 10 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+
+/* Scroll Boxes */
+.scroll-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.row-box {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  animation: dance 1.2s ease-in-out infinite;
+  background-color: #ffffffcc;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 120px;
+}
+
+.box:hover {
+  background-color: #2b2b2b;
+  color: #fff;
+  transform: scale(1.05);
+}
+.register-button {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff6b6b, #f06595);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.register-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.atrium-core-subheading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #FFD700; /* Gold-like glow */
+  text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
+  margin: 40px 0 20px;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif; /* Classy serif font */
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional glowing animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #e3e2d9, 0 0 10px #FFD700, 0 0 20px #fff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #FFD700, 0 0 30px #fff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fffefa, 0 0 10px #FFD700, 0 0 20px #fff;
+  }
+}
+.bubble-button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  color: #050505;
+  background: linear-gradient(135deg, #f7ff01, #ebf8e1, #f69d3c);
+  background-size: 300% 300%;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-position 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(63, 135, 166, 0.4);
+  animation: bubblePulse 3s infinite;
+}
+
+.bubble-button:hover {
+  transform: scale(1.05);
+  background-position:  center;
+}
+
+@keyframes bubblePulse {
+  0% {
+    box-shadow: 0 0 10px rgba(63, 135, 166, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(246, 157, 60, 0.6), 0 0 40px rgba(63, 135, 166, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(63, 135, 166, 0.4);
+  }
+}
+
+.atrium-core-subheading:hover {
+  animation: glow 2s infinite ease-in-out;
+}
+
+/* Events */
+.events-heading {
+  color: white;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px black;
+  text-align: center;
+}
+
+.events-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.event-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  min-width: 180px;
+  text-align: center;
+}
+
+.event-card:hover {
+  transform: scale(1.08) rotate(2deg);
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Modal */
+.modal-backdrop,
+.event-modal-backdrop,
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.event-modal-backdrop {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel-modal {
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.event-description-container {
+  overflow-y: auto;
+  padding: 20px;
+  max-height: 60vh;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Optional: to add a nice scrollbar */
+.event-description-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.event-description-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.carousel-modal,
+.event-modal-carousel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-content {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.carousel-message-box,
+.carousel-message-box.with-image {
+  margin-top: 1rem;
+  text-align: center;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.carousel-box-img,
+.carousel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.info-slide {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
+
+.carousel-btn:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.carousel-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.3s;
+}
+
+.carousel-close:hover {
+  background: rgba(255,255,255,0.5);
+  color: #000;
+}
+
+.carousel-caption {
+  color: #000;
+  text-align: center;
+}
+
+.carousel-caption h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+}
+
+.single-card-carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.carousel-card-wrapper {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-card-single {
+  width: 100%;
+  height: 100%;
+  background: rgba(241, 232, 232, 0.2);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease;
+  animation: fadeSlide 0.5s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-card-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  width: 350px; /* adjust as needed */
+  margin: 0 auto;
+}
+.carousel-card-img {
+  width: 200px; /* smaller than slide */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+}
+.carousel-card-text {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title under the image */
+.carousel-card-title {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+/* Description under the title */
+.carousel-card-desc {
+  font-size: 0.9rem;
+  color: #444;
+  padding: 0 1rem;
+}
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+.carousel-card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  font-weight: normal;
+  line-height: 1.3;
+}
+.carousel-card-desc,
+.carousel-card-title {
+  text-align: center;
+}
+
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 80%;
+  padding: 0.7rem 1.2rem;
+  transition: background 0.3s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Horizontal Carousel */
+.horizontal-carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.horizontal-carousel {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+}
+
+.carousel-card {
+  min-width: 200px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer-bottom {
+  border-top: 1px solid #444;
+}
+
+.footer-bottom h5 {
+  color: #fff;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+.footer a:hover {
+  color: #ffc107;
+  transition: 0.3s ease;
+}
+
+.overlay-content {
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+@media (max-width: 430px) {
+    /* General Layout Adjustments */
+    body {
+      overflow-x: hidden;
+      font-size: 14px;
+    }
+    .wow-text {
+      font-size: 2.5rem;
+      padding: 0.6rem 1rem;
+    }
+    .atrium-carousel {
+      max-width: 400px;
+      margin: 0 auto; /* This centers the element horizontally */
+    }
+    .carousel-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;     /* Center vertically */
+      min-height: 100vh;       /* Full screen height */
+    }
+    
+  
+    .atrium-carousel .carousel-card-text {
+      font-size: 0.9rem;
+    }
+  
+    .atrium-carousel .carousel-arrow {
+      font-size: 2rem;
+      padding: 0.4rem 0.6rem;
+    }
+  
+    .atrium-carousel .carousel-arrow.left {
+      left: 60px;
+    }
+  
+    .atrium-carousel .carousel-arrow.right {
+      right: 60px;
+    }
+    .carousel-card-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    
+    .carousel-card-single {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 90%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+    }
+    
+    .carousel-card-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    
+    .carousel-card-text {
+      text-align: center;
+      margin-top: 1rem;
+      color: #fff;
+    }
+    
+    /* Arrows */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    
+    .carousel-arrow:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel-arrow.left {
+      left: 10px;
+    }
+    
+    .carousel-arrow.right {
+      right: 10px;
+    }
+    
+    /* Mobile-friendly styles */
+    @media (max-width: 430px) {
+      .carousel-card-single {
+        max-width: 90%;
+      }
+    
+      .carousel-arrow {
+        font-size: 2.5rem;
+        padding: 0.3rem 0.6rem;
+      }
+    
+      .carousel-arrow.left {
+        left: 10px;
+      }
+    
+      .carousel-arrow.right {
+        right: 10px;
+      }
+      .carousel-card-wrapper {
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+    
+      
+    
+    
+    .carousel-item img {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+    }
+    .carousel-card-wrapper, {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10%;
+  z-index: 9999; /* Make sure it's above all layers */
+  color: white; /* Ensure visibility */
+  opacity: 1;
+  font-size: 8rem; /* Big enough */
+}
+
+    .main-container, .event-section, .modal-container, .carousel-section {
+      padding: 10px;
+      width: 90vw;
+      box-sizing: border-box;
+    }
+  
+    /* Logo + Navbar Adjustments */
+    .wow-logo {
+      width: 200px;
+      height: auto;
+      margin: 15px auto 5px auto; /* pushes it slightly downward */
+      display: block;
+    }
+    
+    .REC-LOGO {
+      width: 200px;
+      height: auto;
+      margin: 15px auto;
+      display: block;
+      position: relative;
+      left: 50px; /* shifts it 10px to the right */
+    }
+    
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    h1, h2, h3 {
+      font-size: 20px;
+    }
+  
+    p, span {
+      font-size: 14px;
+    }
+  
+    /* Blur Background on Modal Open */
+    .blurred {
+      filter: blur(5px);
+    }
+    /* Event Cards */
+    .event-card {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .event-card img {
+      width: 100%;
+      height: auto;
+    }
+    /* ATRIUM CORE carousel container (adjust based on your wrapper class) */
+.atrium-core-subheading {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.carousel-section {
+  max-height: 250px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* Carousel Image inside the CarouselComponent */
+.carousel-item img {
+  height: 180px; /* Reduce height for better fit */
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Adjust arrow controls */
+
+
+    /* Modals */
+    .carousel-modal {
+      width: 100vw !important;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  
+    .carousel-modal .modal-content {
+      width: 90% !important;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: 40%; /* Lower the position of arrows */
+      font-size: 24px;
+      z-index: 10;
+    }
+  
+    /* Carousel Images */
+    .carousel-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    /* Message Box inside Modal */
+    .message-box {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  
+    /* Register Buttons */
+    .register-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  
+    /* Footer */
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px 10px;
+    }
+  
+    .footer .contact-info,
+    .footer .social-icons {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .footer .social-icons img {
+      width: 24px;
+      margin: 0 6px;
+    }
+  
+    /* Text Styling for Readability */
+    h1, h2, h3 {
+      font-size: 20px;
+    }
+  
+    p, span {
+      font-size: 14px;
+    }
+  
+    /* Blur Background on Modal Open */
+    .blurred {
+      filter: blur(5px);
+    }
+  }
+  
+}
